@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+# Infinite scrolling searchable product list
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository is written in React + Vite + Typescript + Tailwind.
 
-Currently, two official plugins are available:
+## Installing dependencies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`yarn`
+or
+`npm install`
 
-## Expanding the ESLint configuration
+## Running dev
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+`yarn dev`
+or
+`npm run dev`
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Testting
+- After running dev, you can see a URL: http://localhost:5173, navigate to that URL.
+- Then you can see the first 20 products is showing in the list.
+- Scroll down to bottom of the list to trigger load more the next 20 products.
+- You can search for product by name in the search box.
